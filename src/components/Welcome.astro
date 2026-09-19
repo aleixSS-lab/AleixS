@@ -4,20 +4,9 @@ import background from "../assets/background.svg";
 ---
 
 <div id="container">
-  <img id="background" src={background.src} alt="" fetchpriority="high" />
   <main>
     <!-- SE CREA UNA SECCION P -->
     <section id="hero">
-      <!-- LOGO DE ASTRO -->
-      <!-- <a href="https://astro.build">
-        <img
-          src={astroLogo.src}
-          width="115"
-          height="48"
-          alt="Astro Homepage"
-        /></a
-      > -->
-
       <!-- TEXTO EN MEDIO -->
       <h1 id="name">ALEIX SALES SEGURA</h1>
 
@@ -26,7 +15,7 @@ import background from "../assets/background.svg";
         <!-- GITHUB -->
         <a
           class="button"
-          href="https://github.com/aleixSS-lab target="
+          href="https://github.com/aleixSS-lab"
           _blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
@@ -51,6 +40,8 @@ import background from "../assets/background.svg";
             ></path>
           </svg>
         </a>
+
+        <div class="divider"></div>
 
         <!-- DISCORD -->
         <a class="button" href="https://discord.com/users/333197329735614464"
@@ -147,25 +138,15 @@ import background from "../assets/background.svg";
     color: #6e5494;
     transform: scale(1.1);
   }
-  #background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    filter: blur(100px);
-  }
 
   #container {
-    font-family:
-      Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
-      sans-serif;
-    height: 100%;
+    /* Deja que el componente mida solo lo que ocupa su contenido. */
+    min-height: 0;
+    width: 100%;
+    height: 90%;
   }
 
   main {
-    height: 100%;
     display: flex;
     justify-content: center;
   }
@@ -176,6 +157,7 @@ import background from "../assets/background.svg";
     flex-direction: column;
     justify-content: center;
     padding: 16px;
+    margin-top: 10%;
   }
 
   #name {
@@ -190,6 +172,10 @@ import background from "../assets/background.svg";
   #links {
     display: flex;
     gap: 16px;
+  }
+
+  .divider {
+    border-left: 2px solid var(--divider-color);
   }
 
   #links a {
@@ -282,6 +268,7 @@ import background from "../assets/background.svg";
     background: rgba(255, 255, 255, 0.55);
   }
 
+  /* MOBILE AND TABLET */
   @media screen and (max-height: 368px) {
     #news {
       display: none;

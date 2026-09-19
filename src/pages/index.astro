@@ -2,9 +2,12 @@
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Aboutme from "../components/Aboutme.astro";
+import ButtonMode from "../components/ButtonMode.astro";
 ---
 
+<!-- Layout define las variables del tema; sus componentes hijos pueden utilizarlas. -->
 <Layout>
+  <ButtonMode />
   <Welcome />
   <Aboutme />
 </Layout>

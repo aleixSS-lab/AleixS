@@ -1,23 +1,243 @@
-<h1 id="title">ABOUT ME</h1>
-<h3>
-  Hi! I’m Aleix. I am currently pursuing an Advanced Vocational Training degree
-  in Multiplatform Application Development (DAM) at Institut Baix Camp. Since
-  entering the world of IT, I’ve discovered a passion for the entire tech
-  ecosystem—from assembling and optimizing machine hardware to structuring the
-  data and applications that run on it. I am particularly motivated by backend
-  development and business logic. I enjoy designing and creating databases,
-  optimizing SQL queries, and programming in languages ​​like Java. I am also
-  expanding my skillset into web development and the creation of robust,
-  efficient applications. My strength lies in technical problem-solving, whether
-  it’s debugging code, optimizing a database, or configuring and troubleshooting
-  hardware systems at the physical level. Additionally, my previous experience
-  in customer-facing roles has equipped me with key skills such as clear
-  communication, empathy, and the ability to work effectively in a team under
-  pressure. My current areas of interest include: Software and web application
-  development. Database design, creation, and optimization (SQL / PL-SQL).
-  System architecture, hardware assembly, and performance optimization. I am
-  open to connecting with other developers, sharing projects, or discussing
-  opportunities to take my first professional steps in the tech industry. Let’s
-  talk!
-</h3>
-<style></style>
+<section class="about">
+  <div class="about-content">
+    <div class="about-text">
+      <span class="about-label">// ABOUT ME</span>
+
+      <h1 id="title">Who am I?</h1>
+
+      <p class="text">
+        Hi! I’m Aleix. I am currently pursuing an Advanced Vocational Training
+        degree in Multiplatform Application Development (DAM) at Institut Baix
+        Camp. Since entering the world of IT, I’ve discovered a passion for the
+        entire tech ecosystem—from assembling and optimizing machine hardware to
+        structuring the data and applications that run on it.
+      </p>
+
+      <p class="text">
+        I am particularly motivated by backend development and business logic. I
+        enjoy designing and creating databases, optimizing SQL queries, and
+        programming in languages like Java. I am also expanding my skillset into
+        web development and the creation of robust, efficient applications.
+      </p>
+
+      <p class="text">
+        My strength lies in technical problem-solving, whether it’s debugging
+        code, optimizing a database, or configuring and troubleshooting hardware
+        systems at the physical level.
+      </p>
+
+      <p class="text">
+        Additionally, my previous experience in customer-facing roles has
+        equipped me with key skills such as clear communication, empathy, and
+        the ability to work effectively in a team under pressure.
+      </p>
+
+      <p class="text">My current areas of interest include:</p>
+
+      <div class="skills">
+        <span>Software and web application development</span>
+        <span>Database design, creation, and optimization (SQL / PL-SQL)</span>
+        <span
+          >System architecture, hardware assembly, and performance optimization</span
+        >
+      </div>
+
+      <p class="text final-text">
+        I am open to connecting with other developers, sharing projects, or
+        discussing opportunities to take my first professional steps in the tech
+        industry. Let’s talk!
+      </p>
+    </div>
+
+    <div class="about-image">
+      <div class="image-wrapper">
+        <img src="/images/photo_aleix.jpg" alt="Photo of Aleix" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* var(--about-...) obtiene los colores definidos en Layout según el tema activo. */
+  .about {
+    width: 100%;
+    padding: 100px 8%;
+    box-sizing: border-box;
+    background: var(--about-section-background); /* Usa el fondo del tema. */
+  }
+
+  .about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+
+    padding: 60px;
+
+    background: var(--about-background); /* Usa el fondo del panel. */
+    border: 1px solid var(--about-border); /* Usa el borde del tema. */
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .about-text {
+    flex: 1;
+    max-width: 720px;
+  }
+
+  .about-label {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    font-family: monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    color: #8b5cf6;
+  }
+
+  #title {
+    margin: 0 0 30px 0;
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .text {
+    margin: 0 0 20px 0;
+
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 400;
+
+    color: var(--about-text); /* Usa el texto del tema. */
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 25px 0 30px 0;
+  }
+
+  .skills span {
+    display: block;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    background: var(--about-skill-background); /* Fondo de cada habilidad. */
+    border: 1px solid var(--about-skill-border); /* Borde de cada habilidad. */
+
+    color: var(--about-skill-text); /* Texto de cada habilidad. */
+
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .final-text {
+    margin-bottom: 0;
+  }
+
+  .about-image {
+    flex: 0 0 350px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+  }
+
+  .image-wrapper::before {
+    content: "";
+
+    position: absolute;
+    inset: -10px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #694ea9, #06b6d4);
+
+    z-index: 0;
+    opacity: 0.7;
+  }
+
+  .about-image img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    .about {
+      padding: 70px 5%;
+    }
+
+    .about-content {
+      flex-direction: column;
+      gap: 50px;
+      padding: 40px 30px;
+    }
+
+    .about-text {
+      max-width: 100%;
+    }
+
+    #title {
+      font-size: 40px;
+    }
+
+    .about-image {
+      flex: none;
+    }
+
+    .image-wrapper {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .about-content {
+      padding: 30px 20px;
+      border-radius: 20px;
+    }
+
+    #title {
+      font-size: 34px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+
+    .image-wrapper {
+      width: 230px;
+      height: 230px;
+    }
+  }
+</style>
