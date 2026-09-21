@@ -1,5 +1,90 @@
-<h1>MY PROJECTS</h1>
+---
+import ButtonGitHub from "./ButtonGitHub.astro";
+---
 
-<div>
-  <div></div>
-</div>
+<section id="projects-section">
+  <h1 id="projects-title">MY PROJECTS</h1>
+  <hr id="projects-divider" />
+
+  <div id="projects-content">
+    <div id="projects">
+      <h3 id="projects-titles">SHOP FOR CS2</h3>
+      <p>
+        This was a mandatory project for my Higher Vocational Training course in
+        Multiplatform Application Development (DAM). The goal was to develop an
+        online store using Laravel, with a focus on implementing the core
+        functionality required to add, delete, and modify products. The website
+        was not intended to be a fully operational e-commerce platform, but
+        rather a demonstration of these key features. I decided to create a
+        Counter-Strike 2 (CS2)-themed store because it is one of my favorite
+        games. This allowed me to combine the technical requirements of the
+        project with a subject I am personally passionate about.
+      </p>
+
+      <ButtonGitHub href="https://github.com/aleixSS-lab/tienda-cs2" />
+    </div>
+
+    <div id="projects">
+      <h3>DungeonQuest</h3>
+      <p>
+        This was the final project for our Programming course, developed as a
+        pair. The goal was to put the Java knowledge we had acquired throughout
+        the course into practice by creating a game called DungeonQuest. The
+        project included different types of characters, enemies, and dungeons,
+        each with their own specific rules and mechanics. It was a fascinating
+        experience and a great opportunity to strengthen my programming skills
+        while developing a more structured and problem-solving-oriented mindset.
+      </p>
+      <ButtonGitHub href="https://github.com/aleixSS-lab/PROJECTE-Pro" />
+    </div>
+  </div>
+</section>
+
+<style>
+  #projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    height: 97%;
+    padding: 20px;
+
+    background-color: var(--about-section-background);
+  }
+  #projects-title {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  #projects-divider {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+  #project-content {
+    width: 100%;
+    height: 98%;
+  }
+
+  #projects {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--about-background);
+    border: 1px solid var(--about-border);
+    border-radius: 30px;
+    padding: 20px;
+    width: 25%;
+    border: 20px;
+  }
+
+  #projects-titles {
+    font-style: italic;
+  }
+
+  div + div {
+    margin: 20px;
+  }
+</style>
