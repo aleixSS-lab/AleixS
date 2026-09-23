@@ -1,0 +1,54 @@
+<div class="tech-badge php">
+  <img
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+    alt="PHP"
+    class="php-icon"
+  />
+</div>
+<style>
+  .tech-badge.php {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.03)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .tech-badge.php:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(119, 123, 180, 0.2),
+      rgba(79, 93, 149, 0.12)
+    );
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .php-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+  }
+
+  .tech-badge.php:hover .php-icon {
+    transform: scale(1.1) rotate(-5deg);
+  }
+</style>

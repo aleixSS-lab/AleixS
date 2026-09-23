@@ -1,0 +1,56 @@
+<div class="tech-badge laravel">
+  <img
+    src="https://camo.githubusercontent.com/49c982934162722001bc7fa9529756889d31c4e9b0a33ef06370a09a153d2579/68747470733a2f2f63646e2e73696d706c6569636f6e732e6f72672f6c61726176656c2f464632443230"
+    alt="Laravel"
+    class="laravel-icon"
+  />
+</div>
+
+<style>
+  .tech-badge.laravel {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.03)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    width: fit-content;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .tech-badge.laravel:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 45, 32, 0.18),
+      rgba(248, 81, 73, 0.1)
+    );
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .laravel-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+  }
+
+  .tech-badge.laravel:hover .laravel-icon {
+    transform: scale(1.1) rotate(-5deg);
+  }
+</style>
