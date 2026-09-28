@@ -9,8 +9,17 @@ import PhpIcon from "./IconLenguages/PhpIcon.astro";
   <h1 id="projects-title">MY PROJECTS</h1>
   <hr id="projects-divider" />
 
+  <!-- Filtro -->
+  <div class="filter">
+    <button type="button" data-filter="java">☕ Java</button>
+    <button type="button" data-filter="php">🐘 PHP</button>
+    <button type="button" data-filter="laravel">🔺 Laravel</button>
+    <button type="button" data-filter="kotlin">🟣 Kotlin</button>
+  </div>
+
+  <!-- Contenido -->
   <div id="projects-content">
-    <div id="projects">
+    <div class="project" data-langs="php laravel">
       <h3 id="projects-titles">SHOP FOR CS2</h3>
       <p>
         This was a mandatory project for my Higher Vocational Training course in
@@ -23,13 +32,11 @@ import PhpIcon from "./IconLenguages/PhpIcon.astro";
         games. This allowed me to combine the technical requirements of the
         project with a subject I am personally passionate about.
       </p>
-
       <ButtonGitHub href="https://github.com/aleixSS-lab/tienda-cs2" />
       <LaravelIcon />
       <PhpIcon />
     </div>
-
-    <div id="projects">
+    <div class="project" data-langs="java">
       <h3>DungeonQuest</h3>
       <p>
         This was the final project for our Programming course, developed as a
@@ -46,6 +53,8 @@ import PhpIcon from "./IconLenguages/PhpIcon.astro";
   </div>
 </section>
 
+<script src="./JavaScript/Filter.js"></script>
+
 <style>
   #projects-section {
     display: flex;
@@ -55,7 +64,6 @@ import PhpIcon from "./IconLenguages/PhpIcon.astro";
     width: 98%;
     height: 97%;
     padding: 20px;
-
     background-color: var(--about-section-background);
   }
   #projects-title {
@@ -64,18 +72,20 @@ import PhpIcon from "./IconLenguages/PhpIcon.astro";
     margin-bottom: 40px;
     text-align: center;
   }
-
   #projects-divider {
     width: 50%;
     margin-bottom: 40px;
   }
+  #projects-content,
   #project-content {
     width: 100%;
     height: 98%;
   }
-
+  .project,
   #projects {
     display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: center;
     background-color: var(--about-background);
@@ -83,14 +93,45 @@ import PhpIcon from "./IconLenguages/PhpIcon.astro";
     border-radius: 30px;
     padding: 20px;
     width: 25%;
-    border: 20px;
   }
-
   #projects-titles {
     font-style: italic;
   }
-
   div + div {
     margin: 20px;
+  }
+
+  /* Filter */
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .filter button {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--about-border);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    opacity: 0.5;
+    transition:
+      opacity 0.2s,
+      transform 0.2s;
+  }
+
+  .filter button:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  .filter button.on {
+    opacity: 1;
+    background: var(--about-background);
+    border-color: currentColor;
   }
 </style>
