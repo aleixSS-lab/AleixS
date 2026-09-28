@@ -1,5 +1,7 @@
 <section id="mytitles">
   <h1 id="mytitles-h1">My Titles</h1>
+  <hr id="mytitles-divider" />
+
   <div id="mytitles-content">
     <div id="mytitles-titles">
       <h3 id="mytitles-h3">
@@ -16,11 +18,170 @@
       </h3>
       <p id="mytitles-p">Institut Baix Camp (At the moment)</p>
     </div>
+    <div id="mytitles-titles">
+      <h3 id="mytitles-h3">Network fundamentals course: TCP/IP</h3>
+      <a href="https://openwebinars.net/cert/Al3Y">Open Webinars (2025)</a>
+    </div>
+    <div id="mytitles-titles">
+      <h3 id="mytitles-h3">Malware Analysis Course</h3>
+      <a href="https://openwebinars.net/cert/PY45">Open Webinars (2025)</a>
+    </div>
   </div>
 </section>
 
 <style>
-  div + div {
-    margin-top: 20px;
+  #mytitles {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 8%;
+    box-sizing: border-box;
+    background: var(--about-section-background);
+  }
+
+  /* TÍTULO */
+  #mytitles-h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  /* DIVISOR */
+  #mytitles-divider {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+
+  /* CONTENEDOR DE LOS TÍTULOS */
+  #mytitles-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  /* CADA TÍTULO */
+  #mytitles-titles {
+    position: relative;
+
+    padding: 28px 30px;
+
+    background: var(--about-section-background);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  /* HOVER */
+  #mytitles-titles:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(139, 92, 246, 0.3);
+
+    box-shadow:
+      0 15px 40px rgba(0, 0, 0, 0.25),
+      0 0 25px rgba(139, 92, 246, 0.08);
+  }
+
+  /* TÍTULO DEL ESTUDIO */
+  #mytitles-h3 {
+    margin: 0 0 12px;
+
+    padding-left: 5px;
+
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  /* FECHA / INSTITUCIÓN */
+  #mytitles-p {
+    margin: 0;
+    padding-left: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* LINKS DE CERTIFICADOS */
+  #mytitles-titles a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 5px;
+    padding-left: 5px;
+
+    color: #a78bfa;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  #mytitles-titles a::after {
+    content: "↗";
+
+    font-size: 13px;
+
+    transition: transform 0.25s ease;
+  }
+
+  #mytitles-titles a:hover {
+    color: #67e8f9;
+  }
+
+  #mytitles-titles a:hover::after {
+    transform: translate(3px, -3px);
+  }
+
+  /* TABLET */
+  @media (max-width: 900px) {
+    #mytitles {
+      padding: 80px 5%;
+    }
+
+    #mytitles-h1 {
+      font-size: 42px;
+    }
+
+    #mytitles-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* MÓVIL */
+  @media (max-width: 500px) {
+    #mytitles {
+      padding: 70px 5%;
+    }
+
+    #mytitles-h1 {
+      font-size: 36px;
+    }
+
+    #mytitles-titles {
+      padding: 24px 22px;
+    }
+
+    #mytitles-h3 {
+      font-size: 17px;
+    }
   }
 </style>
